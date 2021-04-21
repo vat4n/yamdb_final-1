@@ -57,4 +57,4 @@ git clone https://github.com/ImmensusFirst/infra_sp2.git
 
 
 ### Статус
-![Workflow](https://github.com/ImmensusFirst/yamdb_final/actions/workflows/yamdb_workflow/badge.svg)
+![Workflow](https://github.com/ImmensusFirst/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
