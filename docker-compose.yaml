@@ -10,7 +10,7 @@ services:
 
   web:
     build: .
-    image: immensusf/yamdb_final:v1.60
+    image: immensusf/yamdb_final:lastest
     restart: unless-stopped
     depends_on:
       - db
