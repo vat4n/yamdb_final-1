@@ -56,5 +56,5 @@ git clone https://github.com/ImmensusFirst/infra_sp2.git
 - [Rubtsov Dmitrii](https://github.com/ImmensusFirst)
 
 
-### Статус
+### Статус Workflow
 ![Workflow](https://github.com/ImmensusFirst/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
