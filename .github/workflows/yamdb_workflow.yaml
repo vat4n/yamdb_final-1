@@ -51,8 +51,6 @@ jobs:
   deploy:
     name: Deploy on server
     runs-on: ubuntu-latest
-    env:
-      DOCKER_HUB_IMAGE_TAG: ${{ secrets.DOCKER_HUB_IMAGE_TAG }}
     needs: build_and_push_to_docker_hub
     steps:
       - name: Check out the repo
@@ -66,6 +64,7 @@ jobs:
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
           echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
+          echo DOCKER_HUB_IMAGE_TAG=${{ secrets.DOCKER_HUB_IMAGE_TAG }} >> .env
       - name: Copy file via ssh password
         uses: appleboy/scp-action@master
         with:
@@ -83,7 +82,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            DOCKER_HUB_IMAGE_TAG=${{ secrets.DOCKER_HUB_IMAGE_TAG }}
             cd proj
             sudo docker pull $DOCKER_HUB_IMAGE_TAG
             sudo docker-compose stop
