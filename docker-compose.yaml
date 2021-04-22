@@ -9,8 +9,7 @@ services:
       - ./.env
 
   web:
-    build: .
-    image: immensusf/yamdb_final:lastest
+    image: immensusf/yamdb_final
     restart: unless-stopped
     depends_on:
       - db
