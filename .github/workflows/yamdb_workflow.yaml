@@ -81,9 +81,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            cd proj
             sudo docker pull immensusf/yamdb_final
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker-compose -f proj/docker-compose.yaml up -d
+            sudo docker-compose up -d
 
   send_message:
     runs-on: ubuntu-latest
