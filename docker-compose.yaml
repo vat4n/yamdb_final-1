@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    # image: aaa/bbb
+    # image: aaa/bbb # for pytest
     image: ${DOCKER_HUB_IMAGE_TAG}
     restart: unless-stopped
     depends_on:
