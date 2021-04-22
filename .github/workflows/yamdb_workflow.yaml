@@ -56,7 +56,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - name: Add environment variables to .env
-          run: |
+        run: |
           echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
           echo SERVER_NAMES=${{ secrets.SERVER_NAMES }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
