@@ -20,7 +20,7 @@ API для проекта yamdb.
      
 1. Клонирование репозитория 
 ```bash
-git clone https://github.com/ImmensusFirst/infra_sp2.git
+git clone https://github.com/ImmensusFirst/yamdb_final.git
 ```
 2. Сборка и запуск образа 
 ```bash
