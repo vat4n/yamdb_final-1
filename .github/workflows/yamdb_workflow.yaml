@@ -83,7 +83,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd proj
-            sudo docker pull $DOCKER_HUB_IMAGE_TAG
+            sudo docker pull ${{ secrets.DOCKER_HUB_IMAGE_TAG }}
             sudo docker-compose stop
             sudo docker-compose up -d
 
