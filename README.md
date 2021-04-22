@@ -22,27 +22,41 @@ API для проекта yamdb.
 ```bash
 git clone https://github.com/ImmensusFirst/yamdb_final.git
 ```
-2. Сборка и запуск образа 
-```bash
-- docker-compose up -d --build
+2. Подготовка переменных окружения (Git secrets)
+
+Необходимые переменные:
+```text
+# django
+SECRET_KEY=
+SERVER_NAMES=
+DB_NAME=
+DB_HOST=
+DB_PORT=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+
+# docker
+DOCKER_HUB_IMAGE_TAG=username/project
+DOCKER_USERNAME=
+DOCKER_PASSWORD=
+
+# ssl
+HOST=
+USER=
+SSH_KEY=
+PASSPHRASE=
+
+# telegram
+TELEGRAM_TO=
+TELEGRAM_TOKEN=
 ```
-3. Создание миграций
-```bash
-- docker-compose exec web python manage.py makemigrations
-```
-4. Применение миграций
-```bash
-- docker-compose exec web python manage.py migrate
-```
-5. Сбор статики
-```bash
-- docker-compose exec web python manage.py collectstatic
-```
-6. Создание учетной записи администратора
+3. Запустить action yamdb_final workflow 
+   
+4. Создание учетной записи администратора
 ```bash
 - docker-compose exec web python manage.py createsuperuser
 ```
-7. Загрузка в базу тестовых данных (по желанию) 
+5. Загрузка в базу тестовых данных (по желанию) 
 ```bash
 - docker-compose exec web python manage.py loaddata fixtures.json
 ```
@@ -54,7 +68,6 @@ git clone https://github.com/ImmensusFirst/yamdb_final.git
                          
 ### Об авторе
 - [Rubtsov Dmitrii](https://github.com/ImmensusFirst)
-
 
 ### Статус Workflow
 ![Workflow](https://github.com/ImmensusFirst/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
