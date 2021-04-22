@@ -82,6 +82,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd proj
+            sudo docker pull immensusf/yamdb_final
             sudo docker-compose stop
             sudo docker-compose up -d
 
