@@ -10,8 +10,6 @@ services:
 
   web:
     image: immensusf/yamdb_final
-    ports:
-      - "8000:8000"
     restart: unless-stopped
     depends_on:
       - db

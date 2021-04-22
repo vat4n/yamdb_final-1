@@ -82,11 +82,11 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd proj
-            sudo docker pull immensusf/yamdb_final
-            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker-compose stop
             sudo docker-compose up -d
 
   send_message:
+    name: Send message to telegram
     runs-on: ubuntu-latest
     needs: deploy
     steps:
