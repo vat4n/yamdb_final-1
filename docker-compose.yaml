@@ -9,8 +9,7 @@ services:
       - ./.env
 
   web:
-    # image: aaa/bbb # for pytest
-    image: ${DOCKER_HUB_IMAGE_TAG}
+    image: immensusf/yamdb_final:1.0
     restart: unless-stopped
     depends_on:
       - db
