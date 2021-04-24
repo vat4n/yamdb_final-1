@@ -73,7 +73,7 @@ TELEGRAM_TOKEN=
 ```
 2. При необходимости выполнить миграции и сбор статики 
 ```bash
-- docker-compose exec web source migr_colstat.sh
+- docker-compose exec web sh migr_colstat.sh
 ```
                          
 ### Об авторе
