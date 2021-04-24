@@ -55,7 +55,7 @@ TELEGRAM_TOKEN=
 
 4. Запустить миграции и сбор статики 
 ```bash
-- docker-compose exec web source migr_colstat.sh
+-  docker-compose exec web sh migr_colstat.sh
 ``` 
 5. Создать учетную запись администратора
 ```bash

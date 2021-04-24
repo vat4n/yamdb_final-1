@@ -8,6 +8,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-RUN ["chmod", "+x", "/code/migr_colstat.sh"]
-
 CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
